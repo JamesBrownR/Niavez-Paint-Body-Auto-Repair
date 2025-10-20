@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niavez Paint & Body & Auto Repair</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #2C3E50; /* Dark blue */
+            --accent-color: #E74C3C; /* Red */
+            --bg-light: #F4F6F7; /* Light gray */
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+        }
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        .navbar a {
+            color: var(--text-light) !important;
+        }
+        .header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--text-light);
+        }
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+        .review {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .review h5 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .review p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .stars {
+            color: #FFD700; /* Gold */
+            font-size: 1rem;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        /* Ensure good contrast */
+        a {
+            color: var(--accent-color);
+        }
+        a:hover {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Phone Number -->
+    <header class="header text-center py-3">
+        <div class="container">
+            <h1>Niavez Paint & Body & Auto Repair</h1>
+            <p>Owner: Robbie</p>
+            <a href="tel:+15807291349" class="fs-4">Call Now: +1 (580) 729-1349</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Welcome to Niavez Paint & Body & Auto Repair</h2>
+            <p class="text-center">Your trusted one-stop shop for all automotive needs in Sayre, Oklahoma. With years of experience, our team led by owner Robbie provides top-notch service with honesty and integrity. Whether it's paint, body work, or general auto repairs, we're here to get you back on the road safely.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Paint and Body Repair</li>
+                <li class="list-group-item">Auto Mechanical Repair</li>
+                <li class="list-group-item">Engine Swaps and Rebuilds</li>
+                <li class="list-group-item">Transmission Repairs and Rebuilds</li>
+                <li class="list-group-item">Tire Repairs and Flats</li>
+                <li class="list-group-item">Towing and Pickup Services</li>
+                <li class="list-group-item">And Much More!</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Customer Reviews</h2>
+            <div id="reviews-list"></div>
+            <div class="text-center">
+                <button id="show-more" class="btn btn-primary">Show more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Our Location</h3>
+                    <p>403 W Main St, Sayre, OK 73662</p>
+                    <p>Phone: <a href="tel:+15807291349">+1 (580) 729-1349</a></p>
+                    <h3>Business Hours</h3>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr><td>Monday</td><td>9 AM–5 PM</td></tr>
+                            <tr><td>Tuesday</td><td>9 AM–5 PM</td></tr>
+                            <tr><td>Wednesday</td><td>9 AM–5 PM</td></tr>
+                            <tr><td>Thursday</td><td>9 AM–5 PM</td></tr>
+                            <tr><td>Friday</td><td>9 AM–5 PM</td></tr>
+                            <tr><td>Saturday</td><td>Closed</td></tr>
+                            <tr><td>Sunday</td><td>Closed</td></tr>
+                        </tbody>
+                    </table>
+                    <h3>Book an Appointment</h3>
+                    <!-- Start Square Appointments Embed Code -->
+                    <script src="https://square.site/appointments/buyer/widget/XXXXXXXX/YOUR_LOCATION_ID.js"></script>
+                    <!-- End Square Appointments Embed Code -->
+                    <p><small>Replace YOUR_LOCATION_ID in the code above with your actual Square location ID to enable booking.</small></p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Contact Form</h3>
+                    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <p><small>Replace YOUR_EMAIL in the form action with your actual email address to receive form submissions.</small></p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3 class="text-center">Find Us on Google Maps</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.1450000000003!2d-99.646971384319!3d35.291475980287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87abc58e43025309%3A0x461fa196d5dc9432!2sNiavez%20Paint%20%26%20Body%20%26%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1729467600000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 Niavez Paint & Body & Auto Repair. All rights reserved.</p>
+            <p><a href="https://github.com/JamesBrownR/Niavez-Paint-Body-Auto-Repair" target="_blank">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const reviews = [
+            { name: "Michael Mosburg", rating: 5, body: "I have a 09 F250 with a 6.4l diesel that blew up in Arkansas these guys went and picked it up 350 miles away brought it back to their shop and rebuilt the motor. Truck now has 7k on the new motor running strong. Would definitely do business again!" },
+            { name: "Nora", rating: 5, body: "These guys are great - Robbie was a great guy to work with and he helped me out and explained some things to help me stay road worthy. If you need a mechanic in this area I recommend giving these guys the opportunity to work with you!" },
+            { name: "Christine LaBounta", rating: 5, body: "This shop is not the prettiest but you will find that it's worthwhile as the owners are friendly and very hardworkers. They fixed my flat tire on my Toyota Camry fast and with a fair price.They do outstanding  transmission work mainly! My … More" },
+            { name: "Melissa Niavez", rating: 5, body: "Swapped out engines and rebuilt my transmission in my service work truck. Great work won't be disappointed!! Family owned shop and great prices." },
+            { name: "Zio Portacenere", rating: 5, body: "Excellent service....great people....Awesome price. Highly recommend! Thank you for an outstanding job! Keep up the good work 👏 …" },
+            { name: "Ray Lackey", rating: 5, body: "Great ppl, honest fast and great work" },
+            { name: "Peyton “Carbloxs” Niavez", rating: 5, body: "Nice hard working" },
+            { name: "Heather Sadler", rating: 5, body: "" },
+            { name: "Reviewer 9", rating: 5, body: "" },
+            { name: "Reviewer 10", rating: 5, body: "" },
+            { name: "Reviewer 11", rating: 5, body: "" },
+            { name: "Reviewer 12", rating: 5, body: "" },
+            { name: "Reviewer 13", rating: 5, body: "" }
+        ];
+
+        let visibleCount = 6;
+
+        function renderReviews() {
+            const reviewsList = document.getElementById('reviews-list');
+            reviewsList.innerHTML = '';
+            for (let i = 0; i < Math.min(visibleCount, reviews.length); i++) {
+                const review = reviews[i];
+                const reviewElem = document.createElement('div');
+                reviewElem.classList.add('review');
+                reviewElem.innerHTML = `
+                    <h5>${review.name}</h5>
+                    <p class="stars">${'★'.repeat(review.rating)}</p>
+                    <p>${review.body}</p>
+                `;
+                reviewsList.appendChild(reviewElem);
+            }
+
+            const remaining = reviews.length - visibleCount;
+            const showMoreBtn = document.getElementById('show-more');
+            if (remaining > 0) {
+                const nextBatch = Math.min(6, remaining);
+                showMoreBtn.textContent = `Show ${nextBatch} more`;
+                showMoreBtn.style.display = 'block';
+            } else {
+                showMoreBtn.style.display = 'none';
+            }
+        }
+
+        document.getElementById('show-more').addEventListener('click', () => {
+            visibleCount += 6;
+            renderReviews();
+        });
+
+        renderReviews();
+    </script>
+</body>
+</html>
